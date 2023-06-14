@@ -7,19 +7,38 @@ function calcular() {
     var op2=document.getElementById("op2").value;
     var operador= document.getElementById("select").value;
 
-    if (operador=="+") {
-        var resultado = parseInt(op1)+parseInt(op2);
-        document.getElementById("resultado").innerHTML=resultado;
-    }else if (operador=="-"){
-        var resultado = parseInt(op1)-parseInt(op2);
-        document.getElementById("resultado").innerHTML=resultado;
-    }else if (operador=="*"){
-        var resultado = parseInt(op1)*parseInt(op2);
-        document.getElementById("resultado").innerHTML=resultado;
-    }else{
-        var resultado = parseInt(op1)/parseInt(op2);
-        document.getElementById("resultado").innerHTML=resultado;
-    }   
+    // if (operador=="+") {
+    //     var resultado = parseInt(op1)+parseInt(op2);
+    //     document.getElementById("resultado").innerHTML=resultado;
+    // }else if (operador=="-"){
+    //     var resultado = parseInt(op1)-parseInt(op2);
+    //     document.getElementById("resultado").innerHTML=resultado;
+    // }else if (operador=="*"){
+    //     var resultado = parseInt(op1)*parseInt(op2);
+    //     document.getElementById("resultado").innerHTML=resultado;
+    // }else{
+    //     var resultado = parseInt(op1)/parseInt(op2);
+    //     document.getElementById("resultado").innerHTML=resultado;
+    // }   
 
+    switch (operador){
+        case "+": 
+            var resultado = parseInt(op1)+parseInt(op2);
+            break;
+        case "-":  
+            var resultado = parseInt(op1)-parseInt(op2);
+            break;
+        case "*": 
+            var resultado = parseInt(op1)*parseInt(op2);
+            break;
+        case "/":
+            var resultado = parseInt(op1)/parseInt(op2);
+            break;
+        default:
+            var resultado = "No es posible";
+            document.getElementById("resultado").innerHTML= resultado;
+            
+    }
+    document.getElementById("resultado").innerHTML=resultado;
     
 }
