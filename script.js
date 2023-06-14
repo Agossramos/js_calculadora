@@ -5,7 +5,21 @@ function calcular() {
     // agregarlos en la página en el lugar adecuado
     var op1=document.getElementById("op1").value;
     var op2=document.getElementById("op2").value;
-    var resultado = parseInt(op1)+parseInt(op2);
-    document.getElementById("resultado").innerHTML=resultado;
+    var operador= document.getElementById("select").value;
 
+    if (operador=="+") {
+        var resultado = parseInt(op1)+parseInt(op2);
+        document.getElementById("resultado").innerHTML=resultado;
+    }else if (operador=="-"){
+        var resultado = parseInt(op1)-parseInt(op2);
+        document.getElementById("resultado").innerHTML=resultado;
+    }else if (operador=="*"){
+        var resultado = parseInt(op1)*parseInt(op2);
+        document.getElementById("resultado").innerHTML=resultado;
+    }else{
+        var resultado = parseInt(op1)/parseInt(op2);
+        document.getElementById("resultado").innerHTML=resultado;
+    }   
+
+    
 }
